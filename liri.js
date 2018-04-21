@@ -54,7 +54,6 @@ function processCommands(command, data){
 }
 
 function getTweets(){
-    console.log("tweet function called");
     // set parameters for api call
     var endpoint = "statuses/user_timeline"
     var params = {
