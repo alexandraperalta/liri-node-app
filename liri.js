@@ -29,19 +29,19 @@ function main(){
 function processCommands(command, data){
     switch(command){
         case 'my-tweets':
-            getTweets()
+            getTweets();
             break;
     
         case 'spotify-this-song':
-            getSong(data)
+            getSong(data);
             break;
 
         case 'movie-this':
-            getMovie(data)
+            getMovie(data);
             break;
 
         case 'do-what-it-says':
-            doIt()
+            doIt();
             break;
 
         default:
@@ -155,12 +155,12 @@ function getMovie(movie){
 }
 
 function doIt(){    
-    //read random.txt and send the info to processArgs function
+    //read random.txt and send the info to processCommands function
     fs.readFile("random.txt", "utf8", function(error, data){
         var arr = data.split(",");
         var command = arr[0];
         var requestData = arr[1];
-        processArgs(command, requestData);
+        processCommands(command, requestData);
     });
 };
 
